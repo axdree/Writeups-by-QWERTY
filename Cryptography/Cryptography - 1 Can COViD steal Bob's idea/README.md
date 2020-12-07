@@ -6,8 +6,7 @@ Contents:
  3. Extraction
  4. Solving the Diffie-Hellman Key Exchange
 
-## 1.  DESCRIPTION
-
+## 1.  Description
 Bob wants Alice to help him design the stream cipher's keystream generator base on his rough idea. Can COViD steal Bob's "protected" idea?
 
 For this challenge, we were given a [pcapng](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob%27s%20idea/crypto-challenge-1.pcapng) file
@@ -94,13 +93,13 @@ Starting our calculations, we were given 3 values:
 
 We were initally confused as g^a was bigger than g, but after clarifications from the organizers, we confirmed that g^a is equivalent to g^a mod p and vice versa for g^b.
 
-We did more research and found out that the secret keys in Diffie-Hellman could be cracked by using the [Pohlig-Hellman algorithm](https://en.wikipedia.org/wiki/Pohlig%E2%80%93Hellman_algorithm)
+After more research, we found out that the secret keys in Diffie-Hellman could be cracked by using the [Pohlig-Hellman algorithm](https://en.wikipedia.org/wiki/Pohlig%E2%80%93Hellman_algorithm)
 
 We can use the Pohlig-Hellman algorithm to solve for x in h = g^x mod p
-If we apply this with our values:
+<br>If we apply this with our values:
 g = g^b mod p
 
-We used [Sage Math](https://www.sagemath.org/) to find the shared key with the following code:
+Afterwards, we used [Sage Math](https://www.sagemath.org/) to find the shared key with the following code:
 
     p = 298161833288328455288826827978944092432
     g = 3216590906870332474191827756801961881648
