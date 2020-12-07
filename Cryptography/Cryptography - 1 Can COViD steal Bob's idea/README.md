@@ -69,7 +69,9 @@ Firstly we went to stream 2 on wireshark and changed "Show and save data as" to 
 <br>
 <br>
 ## 
-When we tried to open the file, it was password protected. From what we gathered earlier, the password would be the shared Diffie-Hellman key!
+When we tried to open the file, it was password protected. 
+From what we gathered earlier, the password would be the shared Diffie-Hellman key!
+<br>
 ![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/extractimg4.jpg)
 
 ## 4. Solving the Diffie-Hellman Key Exchange
