@@ -15,7 +15,7 @@ For this challenge, we were given a <insertfilehere >pcapnp file
 ## 2. Analysis
 First off, lets take a look at the pcapng file provided to us.
 
-![ ](Cryptography/Cryptograpy - 1 Can COViD steal Bob's idea/Resources/pcapimg1)
+![ ](Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/pcapimg1.jpg)
 
 Taking a quick look at the file using wireshark, we can see multiple types of traffic. Namely: ARP, TCP, DNS, UDP, ICMPV6.
 
@@ -23,19 +23,19 @@ Based on experience from prior CTF's, I personally find it is always good to loo
 
 This can be done by right clicking the packet and selecting Follow > TCP.
 
-![ ](Cryptography/Cryptograpy - 1 Can COViD steal Bob's idea/Resources/pcapimg2)
-![ ](Cryptography/Cryptograpy - 1 Can COViD steal Bob's idea/Resources/pcapimg3)
+![ ](Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/pcapimg2.jpg)
+![ ](Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/pcapimg3.jpg)
 
 Taking a look at the first TCP stream, we can see a message talking about a keystream generator inside a file., and the password to the file is the shared Diffie-Hellamn key between the two users. 
 
 Immediately after reading this, We knew we were looking for a file. In order to find said file, let's take a look at the other TCP streams.
 
-![ ](Cryptography/Cryptograpy - 1 Can COViD steal Bob's idea/Resources/pcapimg4)
+![ ](Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/pcapimg4.jpg)
 
 This can be done by increasing the stream number on the bottom right of the window.
 
-![ ](Cryptography/Cryptograpy - 1 Can COViD steal Bob's idea/Resources/pcapimg5)
-![ ](Cryptography/Cryptograpy - 1 Can COViD steal Bob's idea/Resources/pcapimg6)
+![ ](Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/pcapimg5.jpg)
+![ ](Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/pcapimg6.jpg)
 
 From the next 2 streams, we can see that the file is downloaded through FTP. 
 We can tell the file is a zip file by looking at the FTP traffic and the file header in the stream 2.
@@ -45,21 +45,22 @@ We can tell the file is a zip file by looking at the FTP traffic and the file he
 There are multiple ways to extract files from cap/pcap/pcapng files. These are the 3 ways we tried.
 
 **1.** Using the built in Export Objects in Wireshark. Unfortunately, this didn't work.
-![ ](Cryptography/Cryptograpy - 1 Can COViD steal Bob's idea/Resources/pcapimg7)
+![ ](Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/pcapimg7.jpg)
 **2.** Using binwalk. This worked but for some odd reason our zip file did not contain anything.
-![ ](Cryptography/Cryptograpy - 1 Can COViD steal Bob's idea/Resources/extractimg1)
+![ ](Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/extractimg1.jpg)
 **3.** Manually extracting from Wireshark. This worked wonders!
-![ ](Cryptography/Cryptograpy - 1 Can COViD steal Bob's idea/Resources/extractimg2)
+![ ](Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/extractimg2.jpg)
 Firstly we went to stream 2 on wireshark and changed "Show and save data as" to raw. Followed by clicking "save as" and saving the file as a zip file on our computer
-![ ](Cryptography/Cryptograpy - 1 Can COViD steal Bob's idea/Resources/extractimg3)
+![ ](Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/extractimg3.jpg)
 
 ## 
 When we tried to open the file, it was password protected. From what we gathered earlier, the password would be the shared Diffie-Hellman key!
-![ ](Cryptography/Cryptograpy - 1 Can COViD steal Bob's idea/Resources/extractimg4)
+![ ](Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/extractimg4.jpg)
 
 ## 4. Solving the Diffie-Hellman Key Exchange
 We started off by finding out more about the diffie-hellman key exchange and found loads of infromation from [Diffie-Hellman Key Exchange (Wikipedia)](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange#:~:text=The%20Diffie%E2%80%93Hellman%20key%20exchange%20method%20allows%20two%20parties%20that,using%20a%20symmetric%20key%20cipher.)
-![ ](Cryptography/Cryptograpy - 1 Can COViD steal Bob's idea/Resources/wikipost)
+
+![ ](Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/wikipost.JPG)
 
 From here, we had a basic understanding of how diffie-hellman worked and proceded to read writeups on past ctf's that were related to Diffie-Hellman.
 
