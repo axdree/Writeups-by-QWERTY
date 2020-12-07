@@ -64,13 +64,17 @@ There are multiple ways to extract files from cap/pcap/pcapng files. These are t
 <br>
 <br>
 Firstly we went to stream 2 on wireshark and changed "Show and save data as" to raw. Followed by clicking "save as" and saving the file as a zip file on our computer
+<br>
+<br>
 ![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/extractimg3.jpg)
 <br>
 <br>
 <br>
 ## 
 When we tried to open the file, it was password protected. 
+<br>
 From what we gathered earlier, the password would be the shared Diffie-Hellman key!
+<br>
 <br>
 ![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/extractimg4.jpg)
 
