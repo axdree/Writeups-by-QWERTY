@@ -15,7 +15,7 @@ For this challenge, we were given a <insertfilehere >pcapnp file
 ## 2. Analysis
 First off, lets take a look at the pcapng file provided to us.
 
-<insertpcapimg1>
+![ ](/Resources/pcapimg1)
 
 Taking a quick look at the file using wireshark, we can see multiple types of traffic. Namely: ARP, TCP, DNS, UDP, ICMPV6.
 
@@ -23,19 +23,19 @@ Based on experience from prior CTF's, I personally find it is always good to loo
 
 This can be done by right clicking the packet and selecting Follow > TCP.
 
-<insertpcapimg2>
-<insertpcapimg3>
+![ ](/Resources/pcapimg2)
+![ ](/Resources/pcapimg3)
 
 Taking a look at the first TCP stream, we can see a message talking about a keystream generator inside a file., and the password to the file is the shared Diffie-Hellamn key between the two users. 
 
 Immediately after reading this, We knew we were looking for a file. In order to find said file, let's take a look at the other TCP streams.
 
-<insertpcapimg4>
+![ ](/Resources/pcapimg4)
 
 This can be done by increasing the stream number on the bottom right of the window.
 
-<insertpcapimg5>
-<insertpcapimg6>
+![ ](/Resources/pcapimg5)
+![ ](/Resources/pcapimg6)
 
 From the next 2 streams, we can see that the file is downloaded through FTP. 
 We can tell the file is a zip file by looking at the FTP traffic and the file header in the stream 2.
@@ -45,21 +45,21 @@ We can tell the file is a zip file by looking at the FTP traffic and the file he
 There are multiple ways to extract files from cap/pcap/pcapng files. These are the 3 ways we tried.
 
 **1.** Using the built in Export Objects in Wireshark. Unfortunately, this didn't work.
-<insertpcapimg6>
+![ ](/Resources/pcapimg7)
 **2.** Using binwalk. This worked but for some odd reason our zip file did not contain anything.
-<insertextractimg1> 
+![ ](/Resources/extractimg1)
 **3.** Manually extracting from Wireshark. This worked wonders!
-<insertextractimg2>
+![ ](/Resources/extractimg2)
 Firstly we went to stream 2 on wireshark and changed "Show and save data as" to raw. Followed by clicking "save as" and saving the file as a zip file on our computer
-<insertextractimg3>
+![ ](/Resources/extractimg3)
 
 ## 
 When we tried to open the file, it was password protected. From what we gathered earlier, the password would be the shared Diffie-Hellman key!
-<insertextractimg4>
+![ ](/Resources/extractimg4)
 
 ## 4. Solving the Diffie-Hellman Key Exchange
 We started off by finding out more about the diffie-hellman key exchange and found loads of infromation from [Diffie-Hellman Key Exchange (Wikipedia)](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange#:~:text=The%20Diffie%E2%80%93Hellman%20key%20exchange%20method%20allows%20two%20parties%20that,using%20a%20symmetric%20key%20cipher.)
-<insertwikipost>
+![ ](/Resources/wikipost)
 
 From here, we had a basic understanding of how diffie-hellman worked and proceded to read writeups on past ctf's that were related to Diffie-Hellman.
 
@@ -80,8 +80,8 @@ g = g^b mod p
 
 We used [Sage Math](https://www.sagemath.org/) to find the shared key with the following code:
 
-    p=298161833288328455288826827978944092432
-    g=3216590906870332474191827756801961881648
+    p = 298161833288328455288826827978944092432
+    g = 3216590906870332474191827756801961881648
     ga = 181553548982634226931709548695881171814
     gb = 64889049934231151703132324484506000958
     MR = IntegerModRing(p)
