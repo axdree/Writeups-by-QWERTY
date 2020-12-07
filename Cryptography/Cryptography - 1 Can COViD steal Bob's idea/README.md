@@ -10,12 +10,12 @@ Contents:
 
 Bob wants Alice to help him design the stream cipher's keystream generator base on his rough idea. Can COViD steal Bob's "protected" idea?
 
-For this challenge, we were given a <insertfilehere >pcapnp file
+For this challenge, we were given a [pcapng](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob%27s%20idea/crypto-challenge-1.pcapng) file
 
 ## 2. Analysis
 First off, lets take a look at the pcapng file provided to us.
 
-![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/pcapimg1.jpg)
+![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/pcapimg1.JPG)
 
 Taking a quick look at the file using wireshark, we can see multiple types of traffic. Namely: ARP, TCP, DNS, UDP, ICMPV6.
 
@@ -29,10 +29,10 @@ This can be done by right clicking the packet and selecting Follow > TCP.
 Taking a look at the first TCP stream, we can see a message talking about a keystream generator inside a file., and the password to the file is the shared Diffie-Hellamn key between the two users. 
 
 Immediately after reading this, We knew we were looking for a file. In order to find said file, let's take a look at the other TCP streams.
+This can be done by increasing the stream number on the bottom right of the window.
 
 ![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/pcapimg4.jpg)
 
-This can be done by increasing the stream number on the bottom right of the window.
 
 ![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/pcapimg5.jpg)
 ![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/pcapimg6.jpg)
