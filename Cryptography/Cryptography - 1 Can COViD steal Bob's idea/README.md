@@ -91,7 +91,7 @@ Starting our calculations, we were given 3 values:
  - g^a = 181553548982634226931709548695881171814
  - g^b = 64889049934231151703132324484506000958
 
-We were initally confused as g^a was bigger than g, but after clarifications from the organizers, we confirmed that g^a is equivalent to g^a mod p and vice versa for g^b.
+We were initally confused as g was bigger than g^a, but after clarifications from the organizers, we confirmed that g^a is equivalent to g^a mod p and vice versa for g^b.
 
 After more research, we found out that the secret keys in Diffie-Hellman could be cracked by using the [Pohlig-Hellman algorithm](https://en.wikipedia.org/wiki/Pohlig%E2%80%93Hellman_algorithm)
 
