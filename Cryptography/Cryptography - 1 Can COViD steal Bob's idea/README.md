@@ -35,7 +35,7 @@ Taking a look at the first TCP stream, we can see a message talking about a keys
 Immediately after reading this, We knew we were looking for a file. In order to find said file, let's take a look at the other TCP streams.
 This can be done by increasing the stream number on the bottom right of the window.
 
-![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/pcapimg4.jpg)
+![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/pcapimg4-2.jpg)
 
 
 ![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/pcapimg5.jpg)
@@ -59,7 +59,7 @@ There are multiple ways to extract files from cap/pcap/pcapng files. These are t
 <br>
 <br>
 **3.** Manually extracting from Wireshark. This worked wonders!
-![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/extractimg2.jpg?)
+![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/extractimg2-2.jpg?)
 <br>
 <br>
 <br>
@@ -70,7 +70,7 @@ Firstly we went to stream 2 on wireshark and changed "Show and save data as" to 
 <br>
 ## 
 When we tried to open the file, it was password protected. From what we gathered earlier, the password would be the shared Diffie-Hellman key!
-![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources//extractimg4.jpg)
+![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/extractimg4.jpg)
 
 ## 4. Solving the Diffie-Hellman Key Exchange
 We started off by finding out more about the diffie-hellman key exchange and found loads of infromation from [Diffie-Hellman Key Exchange (Wikipedia)](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange#:~:text=The%20Diffie%E2%80%93Hellman%20key%20exchange%20method%20allows%20two%20parties%20that,using%20a%20symmetric%20key%20cipher.)
