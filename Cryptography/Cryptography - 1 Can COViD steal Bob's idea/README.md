@@ -18,7 +18,7 @@ First off, lets take a look at the pcapng file provided to us.
 ![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/pcapimg1.JPG)
 
 Taking a quick look at the file using wireshark, we can see multiple types of traffic. Namely: ARP, TCP, DNS, UDP, ICMPV6.
-
+<br>
 Based on experience from prior CTF's, I personally find it is always good to look at and follow TCP & UDP streams first to as they normally contain the data you need. So let's take a look and follow the first TCP packet.
 
 This can be done by right clicking the packet and selecting Follow > TCP.
@@ -27,7 +27,7 @@ This can be done by right clicking the packet and selecting Follow > TCP.
 ![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/pcapimg3.jpg)
 
 Taking a look at the first TCP stream, we can see a message talking about a keystream generator inside a file., and the password to the file is the shared Diffie-Hellamn key between the two users. 
-
+<br>
 Immediately after reading this, We knew we were looking for a file. In order to find said file, let's take a look at the other TCP streams.
 This can be done by increasing the stream number on the bottom right of the window.
 
@@ -46,10 +46,13 @@ There are multiple ways to extract files from cap/pcap/pcapng files. These are t
 
 **1.** Using the built in Export Objects in Wireshark. Unfortunately, this didn't work.
 ![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/pcapimg7.jpg)
+<br>
 **2.** Using binwalk. This worked but for some odd reason our zip file did not contain anything.
 ![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/extractimg1.jpg)
+<br>
 **3.** Manually extracting from Wireshark. This worked wonders!
 ![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/extractimg2.jpg?)
+<br>
 Firstly we went to stream 2 on wireshark and changed "Show and save data as" to raw. Followed by clicking "save as" and saving the file as a zip file on our computer
 ![ ](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/extractimg3.jpg)
 
