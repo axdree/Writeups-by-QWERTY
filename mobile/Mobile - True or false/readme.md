@@ -4,27 +4,27 @@ True or false, we can log in as admin easily.
 
 The description hints that the admin login has a boolean SQL injection, with that in mind, I tried some simple SQL injection,
 found this little hint by click "Forget Password"
-![ ](./resources/hint.jpg?raw=true)
+![ ](./../resources/hint.jpg?raw=true)
 
 Without knowing what type of SQL it could be, I went to decompile the apk to get an answer.
 ```
 sudo apt install jadx dex2jar
 ```
-![ ](./resources/dex.jpg?raw=true)</br>
+![ ](./../resources/dex.jpg?raw=true)</br>
 Start jadx-gui and open the jar file</br>
-![ ](./resources/jadx.jpg?raw=true)</br>
+![ ](./../resources/jadx.jpg?raw=true)</br>
 The app uses SQLite as its database</br>
-![ ](./resources/sqlite.jpg?raw=true)</br>
+![ ](./../resources/sqlite.jpg?raw=true)</br>
 <br>
 <br>
 After many google searches later, I came across this [ExploitDB PDF](https://www.exploit-db.com/docs/english/41397-injecting-sqlite-database-based-applications.pdf)</br>
 With that our goal is to get a "true" from the admin login.</br>
-![ ](./resources/sqltest.jpg?raw=true)</br>
+![ ](./../resources/sqltest.jpg?raw=true)</br>
 Now that we know UNION sql injection works, we just need to figure out how to get the password.</br>
 <br>
 From the "reset password" hint, we know that the "Users" table exist and "admin" too.</br>
 I got this to work:</br>
-![ ](./resources/boolean.jpg?raw=true)
+![ ](./../resources/boolean.jpg?raw=true)
 
 Explanation of how the SQLi works:
 We know that from the "Users" table, there is most likely a "username" column with "admin" in it
@@ -59,5 +59,5 @@ This time we use password column (;-; 32 words to guess, tried burp but nothing)
 ' union select password from Users where hex(substr(password,2,1))=hex('y')-- -<br>
 ' union select password from Users where hex(substr(password,3,1))=hex('_')-- -<br>
 ...</br>
-![ ](./resources/login.jpg?raw=true)
-![ ](./resources/admin.jpg?raw=true)
+![ ](./../resources/login.jpg?raw=true)
+![ ](./../resources/admin.jpg?raw=true)
