@@ -29,7 +29,7 @@ Xiao wants to help. Will you let him help you?
 
 <br>
 
-We tried using “turgen system” to extract out a hidden file but turns out it was the wrong program. Afterwards, we tried using “Sonic Visualiser” and found an image with a hash written on it when we added a spectrogram to all channels.
+We tried using “turgen system” to extract out a hidden file but turns out it was the wrong program. Afterwards, we tried using “Sonic Visualiser” and found an image with a base64 hash written on it when we added a spectrogram to all channels.
 
 <br>
 
@@ -50,19 +50,19 @@ We went to the pastebin link and found a programming language that has been obfu
 ![](https://github.com/lightcoxa/STF-Writeups/blob/main/Forensics/Forensics%20-%202%20Voices%20in%20the%20head/Resources/Brainfuck.png?raw=true)
 
 
-Using https://www.dcode.fr/brainfuck-language we decode the encrypted text and gotten thisisnottheflag.
+Using https://www.dcode.fr/brainfuck-language we decode the encrypted text and gotten "thisisnottheflag" but this was not the flag.
 
 
 ![](https://github.com/lightcoxa/STF-Writeups/blob/main/Forensics/Forensics%20-%202%20Voices%20in%20the%20head/Resources/Brainfuck2.png?raw=true)
 
 
-Using the hint from the question we did more research on xiao and added steganography when searching for answers. We found a software called xiao steganography
+Using the hint from the question we did more research on xiao and added steganography when searching for answers on google. We found a software called xiao steganography
 
 
 ![](https://github.com/lightcoxa/STF-Writeups/blob/main/Forensics/Forensics%20-%202%20Voices%20in%20the%20head/Resources/Xiao-stego.png?raw=true)
 
 
-We proceeded to download the software and executed it.
+We proceeded to download the software.
 
 
 ![](https://github.com/lightcoxa/STF-Writeups/blob/main/Forensics/Forensics%20-%202%20Voices%20in%20the%20head/Resources/Xiao-stego1.png?raw=true)
@@ -93,7 +93,7 @@ Initially, we thought we need to do some data carving on the zip file but after 
 
 <br>
 
-Using the password we gotten, we open the file and the flag was there.
+Using the password we gotten, we open the word document and the flag was there.
 
 <br>
 
