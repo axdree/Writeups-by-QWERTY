@@ -101,21 +101,36 @@ We can use the Pohlig-Hellman algorithm to solve for x in h = g^x mod p
 <br>If we apply this with our values:
 g = g^b mod p
 
-Afterwards, we used [Sage Math](https://www.sagemath.org/) to find the shared key with the following code:
+Afterwards, we used [Sage Math](https://www.sagemath.org/) to find the shared key with the following [code](https://github.com/aadityapurani/My-CTF-Solutions/blob/master/ritsec-2018/DarkpearAI/dh-solve.sage):
 
-    p = 298161833288328455288826827978944092432
-    g = 3216590906870332474191827756801961881648
+    p=298161833288328455288826827978944092433
+    g=216590906870332474191827756801961881648
     ga = 181553548982634226931709548695881171814
     gb = 64889049934231151703132324484506000958
-    MR = IntegerModRing(p)
-    dl1 = discrete_log(MR(ga), MR(g))
-    dl2 = discrete_log(MR(gb), MR(g))
-    print str(IntegerModRing(p)(g)**(dl1*dl2))
-
-
+    M = IntegerModRing(p)
+    secreta = discrete_log(M(ga), M(g))
+    secretb = discrete_log(M(gb), M(g))
+    print str(IntegerModRing(p)(g)**(secreta*secretb))
+    
 Or we can also use this [Discrete Logarithm Calculator](https://www.alpertron.com.ar/DILOG.HTM) to manually calculate the values.
+<br>
+<br>
+Running this code, this was the result we got!
+![_](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/sagemath.JPG?raw=true)
+
+<br>
+<br>
+<br>
+
+We tested the shared key on the zip file and it was unzipped!
+
+![_](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/final1.JPG?raw=true)
+<br>
+<br>
+![_](https://github.com/lightcoxa/STF-Writeups/blob/main/Cryptography/Cryptography%20-%201%20Can%20COViD%20steal%20Bob's%20idea/Resources/final2.JPG?raw=true)
+
 
 ## Flag:
 
-    govtech-csg{}
+    govtech-csg{246544130863363089867058587807471986686}
 
