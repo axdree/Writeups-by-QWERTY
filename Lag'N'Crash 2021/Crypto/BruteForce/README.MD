@@ -1,9 +1,9 @@
 # Crypto / BruteForce?
 
 Contents:
- 1. [Description](#-1.-Description)
- 2. [Analysis](#-2.-Analysis)
- 3. [Decryption](#-3.-Decryption)
+ 1. [Description](#-1.-description)
+ 2. [Analysis](#-2.-analysis)
+ 3. [Decryption](#-3.-decryption)
  
 ## 1.  Description
 ![ ](./Resources/chall.jpg?raw=true)
@@ -54,13 +54,13 @@ Refrencing the [Original Documentation](https://www.unix-ag.uni-kl.de/~conrad/kr
 <br>
 <br>
 <br>
-![ ](./Resources/pkcrack.jpg?raw=true)
+![ ](./Resources/pkcrack.jpg)
 <br>
 After PKCrack was done cracking the zip, we used cat to read flag.txt and got the flag
 <br>
 <br>
 <br>
-![ ](./Resources/flag.jpg?raw=true)
+![ ](./Resources/flag.jpg)
 <br>
 
 > LNC{plain_t3xt_BRO0T_F0RCE}
