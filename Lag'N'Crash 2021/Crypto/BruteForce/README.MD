@@ -10,6 +10,7 @@ Contents:
 <br>
 
 >Do we really need to brute force a password out?
+
 For this challenge, we were given a [Zip](./Resources/brute_force.zip) file.
 <br>
 
@@ -17,6 +18,7 @@ For this challenge, we were given a [Zip](./Resources/brute_force.zip) file.
 <br>
 
 > The zip was encrypted with legacy encryption, can some sort of attacks break this?
+
 We also unlocked a hint for this challenge which really helped us solve this! 
 ~~(this was the first time a ctf hint was useful :x)~~
 
@@ -51,6 +53,7 @@ Following the writeup we found, we installed [PKCrack](https://github.com/keyunl
 Refrencing the [Original Documentation](https://www.unix-ag.uni-kl.de/~conrad/krypto/pkcrack/pkcrack-readme.html) of PKCrack, we used:
 <br>
 > pkcrack -C /home/kali/Desktop/BruteForce/brute_force/Desktop.zip -c readme.txt -P /home/kali/Desktop/BruteForce/brute_force.zip -p readme.txt -d decrypted -a
+
 <br>
 <br>
 <br>
