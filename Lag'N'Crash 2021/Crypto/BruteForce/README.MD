@@ -1,9 +1,9 @@
 # Crypto / BruteForce?
 
 Contents:
- 1. [Description](#-1.-description)
- 2. [Analysis](#-2.-analysis)
- 3. [Decryption](#-3.-decryption)
+ 1. [Description](#1-description)
+ 2. [Analysis](#2-analysis)
+ 3. [Decryption](#3-decryption)
  
 ## 1.  Description
 ![ ](./Resources/chall.jpg?raw=true)
@@ -54,13 +54,13 @@ Refrencing the [Original Documentation](https://www.unix-ag.uni-kl.de/~conrad/kr
 <br>
 <br>
 <br>
-![ ](./Resources/pkcrackresults.jpg?raw=true)
+![ ](https://github.com/lightcoxa/Writeups-by-QWERTY/blob/main/Lag'N'Crash%202021/Crypto/BruteForce/Resources/pkcrackresults.jpg?raw=true)
 <br>
 After PKCrack was done cracking the zip, we used cat to read flag.txt and got the flag
 <br>
 <br>
 <br>
-![ ](./Resources/catflag.jpg?raw=true)
+![ ](https://github.com/lightcoxa/Writeups-by-QWERTY/blob/main/Lag'N'Crash%202021/Crypto/BruteForce/Resources/catflag.jpg?raw=true)
 <br>
 
 > LNC{plain_t3xt_BRO0T_F0RCE}
