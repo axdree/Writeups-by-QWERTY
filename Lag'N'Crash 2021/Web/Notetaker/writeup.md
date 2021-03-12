@@ -40,5 +40,5 @@ Ditching start from scratch to just get flag.txt
 ![](./3.png)
 <br>
 
-Reference: https://fireshellsecurity.team/asisctf-fort-knox/ (All the techniques)
+Reference: https://fireshellsecurity.team/asisctf-fort-knox/ (All the techniques)<br>
 Reference: https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/ (Changing the techniques to do stuff)
