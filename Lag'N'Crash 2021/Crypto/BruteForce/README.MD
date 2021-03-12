@@ -50,6 +50,7 @@ Following the writeup we found, we installed [PKCrack](https://github.com/keyunl
 <br>
 ![ ](./Resources/pkcrackdocs.jpg?raw=true)
 <br>
+<br>
 Refrencing the [Original Documentation](https://www.unix-ag.uni-kl.de/~conrad/krypto/pkcrack/pkcrack-readme.html) of PKCrack, we used
 <br>
 `./pkcrack -C /home/kali/Desktop/BruteForce/brute_force/Desktop.zip -c readme.txt -P /home/kali/Desktop/BruteForce/brute_force.zip -p readme.txt -d decrypted -a` 
