@@ -39,8 +39,6 @@ We then tried to unzip Desktop.zip but the file was password protected
 <br>
 Taking a look at the hint, we did a simple google search on the Legacy Encryptions of Zip and found [this Writeup](https://medium.com/@alloygoh/neverlan-ctf-2018-writeups-935ce1fdb5bb).
 
-![ ](https://github.com/lightcoxa/Writeups-by-QWERTY/blob/main/Lag'N'Crash%202021/Crypto/BruteForce/Resources/pkcrackresults.jpg?raw=true)
-
 ## 3. Decryption
 ![ ](./Resources/pkcracksource.jpg?raw=true)
 <br>
@@ -51,18 +49,18 @@ Following the writeup we found, we installed [PKCrack](https://github.com/keyunl
 ![ ](./Resources/pkcrackdocs.jpg?raw=true)
 <br>
 Refrencing the [Original Documentation](https://www.unix-ag.uni-kl.de/~conrad/krypto/pkcrack/pkcrack-readme.html) of PKCrack, we used:
-
-> ./pkcrack -C /home/kali/Desktop/BruteForce/brute_force/Desktop.zip -c readme.txt -P /home/kali/Desktop/BruteForce/brute_force.zip -p readme.txt -d decrypted -a
+<br>
+> pkcrack -C /home/kali/Desktop/BruteForce/brute_force/Desktop.zip -c readme.txt -P /home/kali/Desktop/BruteForce/brute_force.zip -p readme.txt -d decrypted -a
 <br>
 <br>
 <br>
-
+![ ](./Resources/pkcrackresults.jpg?raw=true)
 <br>
 After PKCrack was done cracking the zip, we used cat to read flag.txt and got the flag
 <br>
 <br>
 <br>
-![ ](https://github.com/lightcoxa/Writeups-by-QWERTY/blob/main/Lag'N'Crash%202021/Crypto/BruteForce/Resources/catflag.jpg?raw=true)
+![ ](./Resources/catflag.jpg?raw=true)
 <br>
-
+<br>
 > LNC{plain_t3xt_BRO0T_F0RCE}
