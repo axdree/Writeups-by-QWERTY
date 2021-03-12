@@ -20,6 +20,7 @@ For this challenge, we were given a [Zip](./Resources/brute_force.zip) file.
 > The zip was encrypted with legacy encryption, can some sort of attacks break this?
 
 We also unlocked a hint for this challenge which really helped us solve this! 
+<br>
 ~~(this was the first time a ctf hint was useful :x)~~
 
 ## 2. Analysis
