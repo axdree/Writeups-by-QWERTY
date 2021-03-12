@@ -36,6 +36,7 @@ Changed to /etc/passwd:
 <br>
 <br>
 Ditching start from scratch to just get flag.txt
+<br>
 ![](./3.png)
 <br>
 
