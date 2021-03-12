@@ -25,3 +25,8 @@ I git clone the tool into my kali and run the tool with argument "python3 Rsactf
 Afterwards, I copy the "d" value and submit the answer to get the flag.
 <br>
 ![flag](https://github.com/lightcoxa/Writeups-by-QWERTY/blob/main/Lag%27N%27Crash%202021/Crypto/Romeo%20Shane%20Arthur/Resource/Flag.PNG)
+<br>
+<br>
+<br>
+> LNC{L4rGe_3Xp0N3nt_15_b4D_L0L}
+
