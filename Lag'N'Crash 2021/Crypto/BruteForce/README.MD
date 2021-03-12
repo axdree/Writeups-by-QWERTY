@@ -67,4 +67,5 @@ After PKCrack was done cracking the zip, we used cat to read flag.txt and got th
 ![ ](./Resources/catflag.jpg?raw=true)
 <br>
 <br>
+## Flag
 > LNC{plain_t3xt_BRO0T_F0RCE}
