@@ -39,6 +39,8 @@ We then tried to unzip Desktop.zip but the file was password protected
 <br>
 Taking a look at the hint, we did a simple google search on the Legacy Encryptions of Zip and found [this Writeup](https://medium.com/@alloygoh/neverlan-ctf-2018-writeups-935ce1fdb5bb).
 
+![ ](https://github.com/lightcoxa/Writeups-by-QWERTY/blob/main/Lag'N'Crash%202021/Crypto/BruteForce/Resources/pkcrackresults.jpg?raw=true)
+
 ## 3. Decryption
 ![ ](./Resources/pkcracksource.jpg?raw=true)
 <br>
@@ -54,7 +56,7 @@ Refrencing the [Original Documentation](https://www.unix-ag.uni-kl.de/~conrad/kr
 <br>
 <br>
 <br>
-![ ](https://github.com/lightcoxa/Writeups-by-QWERTY/blob/main/Lag'N'Crash%202021/Crypto/BruteForce/Resources/pkcrackresults.jpg?raw=true)
+
 <br>
 After PKCrack was done cracking the zip, we used cat to read flag.txt and got the flag
 <br>
