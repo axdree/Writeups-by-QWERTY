@@ -54,13 +54,13 @@ Refrencing the [Original Documentation](https://www.unix-ag.uni-kl.de/~conrad/kr
 <br>
 <br>
 <br>
-![ ](./Resources/pkcrack.jpg)
+![ ](./Resources/pkcrackresults.jpg?raw=true)
 <br>
 After PKCrack was done cracking the zip, we used cat to read flag.txt and got the flag
 <br>
 <br>
 <br>
-![ ](./Resources/flag.jpg)
+![ ](./Resources/catflag.jpg?raw=true)
 <br>
 
 > LNC{plain_t3xt_BRO0T_F0RCE}
