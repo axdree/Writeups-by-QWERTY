@@ -2,9 +2,9 @@
 We occasionally post writeups for the CTF's we participated in as team QWERTY :)
 
 ## Members
-[Andre](andreyap.com)
+[Andre](https://andreyap.com)
 <br>
-[Zhi En](lingzhien.com)
+[Zhi En](https://lingzhien.com)
 <br>
 Kelvin
 <br>
