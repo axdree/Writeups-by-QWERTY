@@ -6,8 +6,8 @@ We occasionally post writeups for the CTF's we participated in as team QWERTY :)
 <br>
 [Zhi En](https://lingzhien.com)
 <br>
-Kelvin
+[Kelvin](https://github.com/WaterExecution)
 <br>
 
 ## View our tools here!
-[Tools (Kelvin)](https://github.com/WaterExecution/CTF-Stuff)
+[Tools](https://github.com/WaterExecution/CTF-Stuff)
