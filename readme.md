@@ -8,6 +8,8 @@ We occasionally post writeups for the CTF's we participated in as team QWERTY :)
 <br>
 [Kelvin](https://github.com/WaterExecution)
 <br>
+[Tristen](https://github.com/mashiroro)
+<br>
 
 ## View our tools here!
 [Tools](https://github.com/WaterExecution/CTF-Stuff)
