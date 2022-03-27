@@ -5,7 +5,7 @@ The mischievous minions were caught in the jail and you are tasked to find the m
 
 > Inside challenge.zip, we are presented with 2 folders and a file.
 ```
-distrib
+challenge.zip/Mini Ion -LX/distrib
  ┣ Images
  ┃ ┣ 1.bob.jpg
  ┃ ┣ 2.darwin.jpg
