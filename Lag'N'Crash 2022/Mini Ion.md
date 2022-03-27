@@ -1,7 +1,19 @@
 # Mini Ion
+
+Contents:
+1. [Description](#1-description)
+2. [Folder Analysis](#2-folder-analysis)
+3. [Getting Zip Password](#3-getting-zip-password)
+4. [GIF processing](#4-gif-processing)
+5. [Fixing Corrupt File](#5-fixing-corrupt-file)
+
+## 1.  Description
+
 The mischievous minions were caught in the jail and you are tasked to find the message to release them!
 
 ![](https://i.imgur.com/1ywGwhD.png) 
+
+## 2. Folder Analysis
 
 > Inside challenge.zip, we are presented with 2 folders and a file.
 ```
@@ -36,6 +48,9 @@ challenge.zip/Mini Ion -LX/distrib
 
 ![](https://i.imgur.com/DupYOOh.png)
 
+
+## 3. Getting Zip Password
+
 > Next, I wrote a simple python script to parse through all the files and decode all the strings, and print the result if the length is below 50.
 
 ```
@@ -63,6 +78,8 @@ for file in files:
  ┣ PASSWORD.GIF
 ```
 
+## 4. GIF Processing
+
 > Taking a look at PASSSWORD.GIF, we can see lines flickering on and off at different locations, which means that it would probably show some information when combined. 
 
 
@@ -85,6 +102,8 @@ convert PASSWORD.gif -transparent white out.gif
 > However, if we try to add the '.7z' extension to the file and open it, we would get an error.
 
 ![](https://i.imgur.com/rIL3XiO.png)
+
+## 5. Fixing Corrupt File
 
 > After a simple google search, I found [this article](https://www.7-zip.org/recover.html) by 7zip on how to fix corrupt .7z files. Looking at the article, we can find an example of headers for a .7z file.
 
