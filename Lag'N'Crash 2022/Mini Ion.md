@@ -30,18 +30,17 @@ challenge.zip/Mini Ion -LX/distrib
  ┃ ┗ 8.mark.jpg
  ┣ Text
  ┃ ┣ 1
- ┃ ┃ ┣ 1.txt
- ┃ ┃ ┣ ...
- ┃ ┃ ┣ 30.txt
+ ┃   ┣ 1.txt
+ ┃   ┣ ...
+ ┃   ┣ 30.txt
  ┃ ┣ ...
- ┃ ┃ ┣ 1.txt
- ┃ ┃ ┣ ...
- ┃ ┃ ┣ 30.txt
- ┃ ┣ 40
- ┃ ┃ ┣ 1.txt
- ┃ ┃ ┣ ...
- ┃ ┃ ┣ 30.txt
- ┃ ┗ script.py
+ ┃   ┣ 1.txt
+ ┃   ┣ ...
+ ┃   ┣ 30.txt
+ ┃ ┗ 40
+ ┃   ┣ 1.txt
+ ┃   ┣ ...
+ ┃   ┗ 30.txt
  ┗ .config.7z
 ```
 
