@@ -9,10 +9,10 @@ Contents:
 
 ## 1.  Description
 
-The mischievous minions were caught in the jail and you are tasked to find the message to release them!
+The mischievous minions were caught in the jail and you are tasked to find the message to release them! 
+[Download File](https://github.com/lightcoxa/Writeups-by-QWERTY/tree/main/Lag'N'Crash%202022/resources/challenge.zip)
 
 ![](https://i.imgur.com/1ywGwhD.png) 
-
 ## 2. Folder Analysis
 
 > Inside challenge.zip, we are presented with 2 folders and a file.
