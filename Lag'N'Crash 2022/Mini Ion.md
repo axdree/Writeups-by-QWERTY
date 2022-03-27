@@ -1,4 +1,4 @@
-# Escape from gulag
+# Mini Ion
 The mischievous minions were caught in the jail and you are tasked to find the message to release them!
 
 ![](https://i.imgur.com/1ywGwhD.png) 
